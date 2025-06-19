@@ -1,0 +1,16 @@
+name: flutter_pose_ws
+description: Flutter app for sending camera frames to WebSocket for pose correction
+publish_to: 'none'
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  web_socket_channel: ^2.4.0
+  camera: ^0.10.5
+  path_provider: ^2.0.11
+
+flutter:
+  uses-material-design: true
