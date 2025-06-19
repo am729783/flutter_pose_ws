@@ -1,0 +1,20 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Install Flutter Web
+    init: |
+      git clone https://github.com/flutter/flutter.git -b stable
+      export PATH="$PATH:/workspace/flutter/bin"
+      flutter config --enable-web
+      flutter doctor
+
+  - name: Get Packages
+    command: |
+      export PATH="$PATH:/workspace/flutter/bin"
+      flutter pub get
+
+  - name: Run App on Web
+    command: |
+      export PATH="$PATH:/workspace/flutter/bin"
+      flutter run -d chrome
